@@ -16,11 +16,7 @@ public abstract class Persoon implements Comparable <Persoon> {
     public int compareTo (Persoon ander){
         return naam.compareTo(ander.toString());
     }
-
-    public String getNaam() {
-        return naam;
-    }
-
+    
     @Override
     public String toString() {
         return this.naam;

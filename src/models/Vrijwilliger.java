@@ -13,7 +13,6 @@ public class Vrijwilliger extends Persoon implements Oproepbaar {
         return 0.0;
     }
 
-
     @Override
     public void huurIn(int uren) {
 

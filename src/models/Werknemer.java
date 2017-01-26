@@ -11,31 +11,22 @@ public class Werknemer extends Persoon {
     public Werknemer(double maandSalaris, String naam){
         super(naam);
         this.maandSalaris = maandSalaris;
-        personeelsNummer = laatstePersoneelsNummer++;
-    }
-
-    public int getPersoneelsNummer() {
-        return personeelsNummer;
-    }
-
-    public double getMaandSalaris() {
-        return maandSalaris;
-    }
-
-    public void setMaandSalaris(double maandSalaris) {
-        this.maandSalaris = maandSalaris;
-    }
-
-    public void setPersoneelsNummer(int personeelsNummer) {
-        this.personeelsNummer = personeelsNummer;
     }
 
     public static int getLaatstePersoneelsNummer() {
         return laatstePersoneelsNummer;
     }
 
+    public int getPersoneelsNummer() {
+        return personeelsNummer;
+    }
+
     public static void setLaatstePersoneelsNummer(int laatstePersoneelsNummer) {
         Werknemer.laatstePersoneelsNummer = laatstePersoneelsNummer;
+    }
+
+    public void setPersoneelsNummer(int personeelsNummer) {
+        this.personeelsNummer = personeelsNummer;
     }
 
     @Override

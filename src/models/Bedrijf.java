@@ -20,9 +20,10 @@ public class Bedrijf {
         for (Persoon mederwerker : medewerkers){
             if(mederwerker.berekenInkomsten() == 0.0){
                 System.out.println(mederwerker.toString() + ", bedankt voor uw inzet!");
+            } else{
+                System.out.println(mederwerker.toString() + " inkomsten : "
+                        + mederwerker.berekenInkomsten());
             }
-            System.out.println(mederwerker.toString() + "inkomsten : "
-            + mederwerker.berekenInkomsten());
         }
     }
     public int aantalManagers(){
@@ -36,6 +37,10 @@ public class Bedrijf {
     }
 
     public void neemInDienst(Persoon persoon){
+        if (persoon instanceof Werknemer){
+            ((Werknemer) persoon).setPersoneelsNummer(Werknemer.getLaatstePersoneelsNummer()+1);
+            Werknemer.setLaatstePersoneelsNummer(((Werknemer) persoon).getPersoneelsNummer()+1);
+        }
         medewerkers.add(persoon);
     }
 
